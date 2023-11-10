@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M.FUNCH</title>
+    <!-- og -->
+    <meta property="og:title" content="JCC" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="" />
+    <!-- font -->
+    <link rel="stylesheet" href="./common/css/font.css" />
+    <!-- reset -->
+    <link rel="stylesheet" href="./common/css/reset.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./common/css/header.css" />
+    <link rel="stylesheet" href="./common/css/footer.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index_pc.css" />
+    <!-- <link rel="stylesheet" href="./main.css"> -->
+    <!-- fivicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="h_top">
+        <h1 class="h_logo">
+          <a href="#"
+            ><img src="./images/logo.svg" alt="로고" class="logo"
+          /></a>
+          <a href="#"><img src="./images/logo-w.svg" alt="흰색 로고" /></a>
+        </h1>
+        <menu class="h_pc_menu">
+          <li><a href="#">works</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">inside</a></li>
+        </menu>
+        <div id="nav-bg" class="btn"></div>
+        <div id="toggle-btn" class="btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="wrapper">
+          <nav>
+            <ul>
+              <li>
+                <a class="link" href="#0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-70 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EA5028">
+                      <path
+                        d="M28.679 22.082c1.26-4.261 5.34-4.561 7.74-4.561s6.48.3 7.74 4.561l6.3 21.479c.06.3.42 1.021.66 1.021.18 0 .48-.12.78-1.261l6.959-25.318h13.8L62.397 51.78c-2.16 7.14-4.86 8.7-10.32 8.7-6.359 0-8.399-2.761-9.719-7.26l-5.34-18.239c-.18-.301-.3-1.08-.6-1.08s-.42.779-.6 1.08l-5.34 18.239c-1.32 4.499-3.36 7.26-9.719 7.26-5.34 0-8.16-1.62-10.32-8.7L.18 18.002h13.8l6.959 25.318c.3 1.141.6 1.261.78 1.261.24 0 .6-.721.66-1.021l6.3-21.478zM109.618 44.101c0 13.199-5.16 16.26-18.359 16.26-13.2 0-18.359-3.061-18.359-16.26s5.16-16.259 18.359-16.259c13.199 0 18.359 3.059 18.359 16.259zM91.259 51.96c5.4 0 6.36-3.06 6.36-7.859s-.96-7.859-6.36-7.859-6.36 3.06-6.36 7.859.96 7.859 6.36 7.859zM113.339 41.4c0-10.199 5.399-13.199 15.6-13.199h7.739v8.279h-4.379c-5.4 0-7.2 3-7.2 8.4V60h-11.76V41.4zM139.199 60V18.002h11.76V60h-11.76zm23.939 0-8.64-11.399c-1.74-2.34-1.859-4.08-1.859-5.1 0-2.34.84-3.48 1.92-4.98l7.26-10.319h12.719l-9.659 12.659c-.54.66-.84 1.62-.84 2.28 0 .9.479 1.98 1.2 2.88L176.338 60h-13.2zM176.938 51.48h17.339c.42 0 1.021-.24 1.021-.84 0-.96-3.24-1.62-4.14-1.98l-6.84-2.22c-4.859-1.62-7.74-3.54-7.74-9.539 0-6 3-8.7 8.4-8.7h21.719v8.16h-17.279c-.48 0-1.92 0-1.92.6 0 .9 1.62 1.14 3.061 1.62l8.039 2.7c5.279 1.8 8.939 3.72 8.939 10.319 0 5.999-3 8.399-8.399 8.399h-22.199V51.48z"
+                      ></path>
+                    </g></svg
+                ></a>
+              </li>
+              <li>
+                <a class="link" href="#0"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-77 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EB4A33">
+                      <path
+                        d="M17.119 23.621c1.32-3.119 3.12-5.1 9.6-5.1 3.96 0 7.68.42 9.6 5.1L51.858 61H37.579l-3.3-8.64h-15.12l-3.3 8.64H1.58l15.539-37.379zm5.28 19.14h8.64l-3.78-10.619c-.12-.421-.3-.9-.54-.9-.24 0-.42.479-.54.9l-3.78 10.619zM60.138 61c-4.2 0-6.6-2.4-6.6-6.6V19.002h11.76v10.199h8.879c10.2 0 13.2 6.3 13.2 15.899s-3 15.9-13.199 15.9h-14.04zm5.16-11.399c0 2.399.6 3 3 3h2.16c4.44 0 4.92-3.66 4.92-7.5 0-3.06-.54-7.5-4.68-7.5h-5.399v12zM126.977 45.101c0 13.199-5.16 16.26-18.359 16.26s-18.36-3.061-18.36-16.26 5.16-16.259 18.359-16.259 18.36 3.059 18.36 16.259zm-18.36 7.859c5.4 0 6.359-3.06 6.359-7.859s-.959-7.859-6.359-7.859c-5.399 0-6.359 3.06-6.359 7.859s.96 7.859 6.359 7.859zM165.137 54.4c0 4.8-2.4 6.6-6.601 6.6h-15.239c-7.8 0-12.6-4.2-12.6-12V29.201h11.76v16.92c0 4.799 1.8 6.6 6.6 6.6h1.92c1.8 0 2.4-.601 2.4-2.4v-21.12h11.76V54.4zM184.156 61c-6.6 0-11.999-3-11.999-10.8V37.6h-4.499v-8.399h4.499V19.002h11.76v10.199h9.06V37.6h-9.06v7.2c0 4.8 1.8 7.8 7.2 7.8h1.859V61h-8.82z"
+                      ></path>
+                    </g></svg
+                ></a>
+              </li>
+              <li>
+                <a class="link" href="#0"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-55 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EA5028">
+                      <path
+                        d="M20.529 60C6.73 60 2.17 53.4 2.17 39.001s4.56-20.999 18.359-20.999h17.759v10.439H27.489c-9 0-11.4 1.56-11.4 10.56 0 8.999 2.4 10.56 11.4 10.56h11.399V60H20.529zM78.008 44.101c0 13.199-5.16 16.26-18.359 16.26-13.2 0-18.359-3.061-18.359-16.26s5.16-16.259 18.359-16.259c13.199 0 18.359 3.059 18.359 16.259zM59.649 51.96c5.4 0 6.36-3.06 6.36-7.859s-.96-7.859-6.36-7.859-6.36 3.06-6.36 7.859.96 7.859 6.36 7.859zM81.729 34.801c0-4.8 2.4-6.6 6.6-6.6h14.76c7.8 0 12.6 4.2 12.6 12V60h-11.76V43.201c0-4.801-1.8-6.601-6.6-6.601h-1.44c-1.8 0-2.4.601-2.4 2.4v21h-11.76V34.801zM134.708 60c-6.6 0-11.999-3-11.999-10.8V36.6h-4.5v-8.399h4.5V18.002h11.76v10.199h9.059V36.6h-9.059v7.2c0 4.8 1.799 7.8 7.199 7.8h1.859V60h-8.819zM168.487 28.201c6.6 0 10.8 4.2 10.8 10.8V53.4c0 4.199-2.4 6.6-6.6 6.6h-19.68c-6 0-7.8-3.479-7.8-10.08 0-5.999 1.8-9.839 7.8-9.839h14.52v-.601c0-2.1-1.381-3.119-3.6-3.119h-16.56v-8.16h21.12zm-9.299 19.32c-1.2 0-2.22.96-2.22 2.399 0 1.08.72 2.28 2.1 2.28h6.06c1.801 0 2.4-.6 2.4-2.399v-2.28h-8.34zM196.207 60c-10.8 0-13.199-6.24-13.199-15.84s2.399-15.959 13.199-15.959h17.039V36.6h-11.64c-4.8 0-6.6 2.761-6.6 7.56 0 4.801 1.8 7.44 6.6 7.44h12.3V60h-17.699zM232.566 60c-6.6 0-12-3-12-10.8V36.6h-4.5v-8.399h4.5V18.002h11.76v10.199h9.06V36.6h-9.06v7.2c0 4.8 1.8 7.8 7.199 7.8h1.86V60h-8.819z"
+                      ></path>
+                    </g></svg
+                ></a>
+              </li>
+              <li>
+                <a class="link" href="#0"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-85 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EA5028">
+                      <path
+                        d="M3.95 60V18.002h13.56V60H3.95zM22.79 34.801c0-4.8 2.4-6.6 6.6-6.6h14.759c7.799 0 12.599 4.2 12.599 12V60H44.989V43.201c0-4.801-1.8-6.601-6.6-6.601h-1.44c-1.8 0-2.4.601-2.4 2.4v21H22.79V34.801zM60.469 51.48h17.339c.42 0 1.02-.24 1.02-.84 0-.96-3.24-1.62-4.14-1.98l-6.839-2.22c-4.86-1.62-7.74-3.54-7.74-9.539 0-6 3-8.7 8.399-8.7h21.719v8.16H72.949c-.48 0-1.92 0-1.92.6 0 .9 1.62 1.14 3.06 1.62l8.04 2.7c5.28 1.8 8.939 3.72 8.939 10.319 0 5.999-3 8.399-8.399 8.399h-22.2V51.48zM94.428 25.621v-7.619h11.76v7.619h-11.76zm0 2.58h11.76V60h-11.76V28.201zM123.107 60c-10.199 0-13.199-6.3-13.199-15.899s3-15.899 13.199-15.899h8.879v-10.2h11.76V53.4c0 4.199-2.399 6.6-6.6 6.6h-14.039zm8.879-23.399h-5.399c-4.14 0-4.68 4.44-4.68 7.5 0 3.84.479 7.5 4.92 7.5h2.159c2.4 0 3-.601 3-3v-12zM159.767 60c-10.199 0-12.3-2.88-12.3-16.079 0-14.399 2.7-16.079 17.1-16.079 12 0 17.039.959 17.039 12.959 0 3.6-.84 7.08-5.039 7.08h-17.34c0 3 1.62 3.959 5.82 3.959h15.419V60h-20.699zm8.159-19.56c1.92 0 1.92-1.38 1.92-1.979 0-2.28-3.479-2.46-5.279-2.46-3 0-5.34.479-5.34 4.439h8.699z"
+                      ></path>
+                    </g></svg
+                ></a>
+              </li>
+              <!-- 본인 페이지를 의미하는 아이콘 하나로 설정하던가 통일해봅시다. -->
+              <li><img src="./images/logo.svg" alt="서브메뉴 이미지" /></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- main_intro -->
+    <!-- <div class="smooth-scroll-container">
+    <div class="smooth-scroll-item"> -->
+    <!-- 스크롤 플러그인 -->
+    <div class="main_sticky">
+      <section class="main_intro">
+        <div class="intro_txt">
+          <h2 class="txt_bold">fun</h2>
+          <p>creative</p>
+          <h2 class="txt_color">m.funch</h2>
+        </div>
+        <div class="meteor_wrap">
+          <img src="./images/meteor-img3.svg" alt="네모 유성" id="m_1" />
+          <img src="./images/meteor-img1.svg" alt="세모 유성" id="m_2" />
+          <img src="./images/meteor-img2.svg" alt="동그라미 유성" id="m_3" />
+          <img src="./images/meteor-img4.svg" alt="오각형 유성" id="m_4" />
+        </div>
+        <div class="intro_imgs">
+          <img
+            src="./images/astronaut-img.svg"
+            alt="우주선 & 우주인 이미지"
+            id="h1"
+          />
+          <img
+            src="./images/planet-group-m.svg"
+            alt="모바일 행성표면 & 우주인 이미지"
+            id="h2"
+          />
+          <img
+            src="./images/planet-group.svg"
+            alt="행성표면 & 우주인 이미지"
+            id="h3"
+          />
+          <img src="./images/mv-title-icon.svg" alt="부유하는 우주인" id="h4" />
+        </div>
+        <div class="intro_bg">
+          <img
+            src="./images/overlap-ground.svg"
+            alt="pc오버랩"
+            id="pc_bg"
+            class="pc_bg"
+          />
+          <img
+            src="./images/overlap-ground-m.svg"
+            alt="모바일 오버랩"
+            id="m_bg"
+            class="m_bg"
+          />
+        </div>
+      </section>
+    </div>
+    <!-- works -->
+    <section class="works">
+      <div class="w_cloud"></div>
+      <div class="w_wrap">
+        <div class="w_works">
+          <div class="w_work group1 university">
+            <div class="university_img work_img">
+              <a href="#" class="w_img img1 circle_type">
+                <img
+                  src="./images/works_thumb_024.jpg"
+                  alt="국립한국농수산대학교"
+                />
+                <img
+                  src="./images/works_thumb_logo_024.png"
+                  class="hidden_img"
+                  alt="국립한국농수산대학교_logo"
+                />
+              </a>
+            </div>
+            <p>국립한국농수산대학교 마이크로사이트</p>
+          </div>
+          <div class="w_work group1 engoo">
+            <div class="engoo_img work_img">
+              <a href="#" class="w_img img2">
+                <img src="./images/works_thumb_023.jpg" alt="엔구" />
+                <img
+                  src="./images/works_thumb_logo_023.png"
+                  class="hidden_img"
+                  alt="엔구_logo"
+                />
+              </a>
+            </div>
+            <p>엔구 화상영어</p>
+          </div>
+          <div class="w_work group1 kukbo">
+            <div class="kukbo_img work_img">
+              <a href="#" class="w_img img3 rhombus_type">
+                <img src="./images/works_thumb_001.jpg" alt="국보디자인" />
+                <img
+                  src="./images/works_thumb_logo_001.png"
+                  class="hidden_img"
+                  alt="국보디자인_logo"
+                />
+              </a>
+            </div>
+            <p>국보디자인</p>
+          </div>
+          <div class="w_work group1 sk">
+            <div class="sk_img work_img">
+              <a href="#" class="w_img img4 pentagon_type">
+                <img src="./images/works_thumb_002.jpg" alt="SV 캠페인" />
+                <img
+                  src="./images/works_thumb_logo_002.png"
+                  class="hidden_img"
+                  alt="캠페인_logo"
+                />
+              </a>
+            </div>
+            <p>SV 캠페인 마이크로 사이트&굿즈</p>
+          </div>
+          <div class="w_work group2 save_children">
+            <div class="save_children_img work_img">
+              <a href="#" class="w_img img5 rhombus_type">
+                <img src="./images/works_thumb_003.jpg" alt="놀이터를 지켜라" />
+                <img
+                  src="./images/works_thumb_logo_003.png"
+                  class="hidden_img"
+                  alt="놀이터_logo"
+                />
+              </a>
+            </div>
+            <p>놀이터를 지켜라</p>
+          </div>
+          <div class="w_work group2 unicef">
+            <div class="unicef_img work_img">
+              <a href="#" class="w_img img6">
+                <img src="./images/works_thumb_004.jpg" alt="유니세프" />
+                <img
+                  src="./images/works_thumb_logo_004.png"
+                  class="hidden_img"
+                  alt="유니세프_logo"
+                />
+              </a>
+            </div>
+            <p>유니세프 '유산기부' 캠페인</p>
+          </div>
+          <div class="w_work group2 park">
+            <div class="park_img work_img">
+              <a href="#" class="w_img img7 pentagon_type">
+                <img src="./images/works_thumb_019.jpg" alt="파크시스템스" />
+                <img
+                  src="./images/works_thumb_logo_019.png"
+                  class="hidden_img"
+                  alt="파크시스템스_logo"
+                />
+              </a>
+            </div>
+            <p>파크시스템스</p>
+          </div>
+          <div class="w_work group2 lg">
+            <div class="lg_img work_img">
+              <a href="#" class="w_img img8">
+                <img src="./images/works_thumb_005.jpg" alt="어나더바이브" />
+                <img
+                  src="./images/works_thumb_logo_005.png"
+                  class="hidden_img"
+                  alt="어나더바이브_logo"
+                />
+              </a>
+            </div>
+            <p>어나더바이브</p>
+          </div>
+          <div class="w_work group3 sign">
+            <div class="sign_img work_img">
+              <a href="#" class="w_img img9 pentagon_type">
+                <img src="./images/works_thumb_006.jpg" alt="한컴" />
+                <img
+                  src="./images/works_thumb_logo_006.png"
+                  class="hidden_img"
+                  alt="한컴_logo"
+                />
+              </a>
+            </div>
+            <p>한컴 싸인</p>
+          </div>
+          <div class="w_work group3 deart">
+            <div class="deart_img work_img">
+              <a href="#" class="w_img img10 circle_type">
+                <img src="./images/works_thumb_007.jpg" alt="DeArt82" />
+                <img
+                  src="./images/works_thumb_logo_007.png"
+                  class="hidden_img"
+                  alt="DeArt82_logo"
+                />
+              </a>
+            </div>
+            <p>DeArt82</p>
+          </div>
+          <div class="w_work group3 children">
+            <div class="children_img work_img">
+              <a href="#" class="w_img img11 rhombus_type">
+                <img src="./images/works_thumb_008.jpg" alt="국제어린이" />
+                <img
+                  src="./images/works_thumb_logo_008.png"
+                  class="hidden_img"
+                  alt="국제어린이_logo"
+                />
+              </a>
+            </div>
+            <p>국제어린이 마라톤 ('20~22')</p>
+          </div>
+          <div class="w_work group3 hyundai">
+            <div class="hyundai_img work_img">
+              <a href="#" class="w_img img12">
+                <img src="./images/works_thumb_021.jpg" alt="CES" />
+                <img
+                  src="./images/works_thumb_logo_021.png"
+                  class="hidden_img"
+                  alt="CES_logo"
+                />
+              </a>
+            </div>
+            <p>CES 2022 PnD Prototypr App</p>
+          </div>
+          <div class="w_work group4 tune">
+            <div class="tune_img work_img">
+              <a href="#" class="w_img img13 circle_type">
+                <img src="./images/works_thumb_009.jpg" alt="TuneH" />
+                <img
+                  src="./images/works_thumb_logo_009.png"
+                  class="hidden_img"
+                  alt="TuneH_logo"
+                />
+              </a>
+            </div>
+            <p>Tune H</p>
+          </div>
+          <div class="w_work group4 zeiss">
+            <div class="zeiss_img work_img">
+              <a href="#" class="w_img img14">
+                <img src="./images/works_thumb_010.jpg" alt="자이스" />
+                <img
+                  src="./images/works_thumb_logo_010.png"
+                  class="hidden_img"
+                  alt="자이스_logo"
+                />
+              </a>
+            </div>
+            <p>자이스 비전케어</p>
+          </div>
+          <div class="w_work group4 innovation">
+            <div class="innovation_img work_img">
+              <a href="#" class="w_img img15 pentagon_type">
+                <img src="./images/works_thumb_012.jpg" alt="혁신박람회" />
+                <img
+                  src="./images/works_thumb_logo_012.png"
+                  class="hidden_img"
+                  alt="혁신박람회_logo"
+                />
+              </a>
+            </div>
+            <p>대한민국 혁신박람회, 2021</p>
+          </div>
+          <div class="w_work group4 kolon">
+            <div class="kolon_img work_img">
+              <a href="#" class="w_img img16 circle_type">
+                <img src="./images/works_thumb_022.jpg" alt="K-Ventures" />
+                <img
+                  src="./images/works_thumb_logo_022.png"
+                  class="hidden_img"
+                  alt="K-Ventures_logo"
+                />
+              </a>
+            </div>
+            <p>K-Ventures</p>
+          </div>
+        </div>
+        <div class="w_btn">
+          <a href="./sub/work/Work.html" class="more_btn txt_color">More</a>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about">
+      <div class="a_container">
+        <div class="a_circle_wrap">
+          <div class="a_circle_bg">
+            <div class="a_bg_inner">
+              <video src="./images/메인.mp4" autoplay muted loop></video>
+            </div>
+          </div>
+        </div>
+        <div class="a_mfunch_wrap">
+          <div class="mfunch_content">
+            <p class="mfunch_txt">
+              브랜드 가치를 높이는<br />
+              <span class="txt_bold">크리에이티브 웹 전문가</span>
+            </p>
+            <p class="mfunch_title">M.FUNCH</p>
+            <p class="mfunch_since">ICT Creaive Group, Since 2014</p>
+            <a href="#" class="a_btn">
+              <span>
+                <img
+                  src="./images/btn-arrow-right.svg"
+                  alt="오른쪽 화살표"
+                  class="a_btn_arrow"
+                />
+              </span>
+              <span>About M.Funch</span>
+              <span>
+                <img
+                  src="./images/btn-arrow-right.svg"
+                  alt="오른쪽 화살표"
+                  class="a_btn_arrow"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- </div>
+  </div> -->
+    <!-- contact -->
+    <section class="contact">
+      <div class="c_img">
+        <img src="./images/contact-img.svg" alt="우주인 이미지" />
+      </div>
+      <div class="c_txt">
+        <h3>
+          프로젝트에 대한<br />
+          궁금한 점을 문의로 남겨주세요.
+        </h3>
+        <p>
+          <span class="txt_bold">비주얼 퍼포먼스와 웹 퍼포먼스</span>를
+          <span class="txt_block">기반으로 브랜드 가치를 높이세요.</span>
+          <span class="c_pc_txt"
+            >브랜드 목적별 차별화된 네러티브로 완성도 있는 결과를
+            보여드립다.</span
+          >
+        </p>
+        <div class="c_address">
+          <p>
+            서울시 마포구 매봉산로 37,DMC 산학협력연구센터,1004호
+            info@mfunch.com
+          </p>
+        </div>
+      </div>
+      <!-- QNA -->
+      <div class="c_content">
+        <div class="c_qna">
+          <a href="#" class="inner inner_qna_btn">
+            <img
+              src="./images/contact-icon1.png"
+              alt="연필 이미지"
+              class="pencil"
+            />
+            <p class="txt_color">
+              <span class="txt_bold">프로젝트</span> 문의하기
+            </p>
+          </a>
+        </div>
+        <!-- brochure -->
+        <div class="c_brochure">
+          <a href="#" class="inner inner_brochur_btn">
+            <img src="./images/contact-icon2.png" alt="메모 이미지" />
+            <p class="txt_color">
+              <span class="txt_bold">브로슈어</span> 신청하기
+            </p>
+          </a>
+          <div class="c_brochure_modal">
+            <form class="c_brochure_content">
+              <div class="c_brochure_client">
+                <a class="brochure_close_btn"
+                  ><img
+                    src="./images/sitemap_close.png"
+                    alt="브로슈어 신청 닫기 버튼"
+                /></a>
+                <h4 class="txt_color">브로슈어 신청하기</h4>
+                <div class="c_brochure_txtboxs">
+                  <div class="c_brochure_txtbox">
+                    <label class="txt_bold"> 회사/단체명</label><br />
+                    <input type="text" class="c_brochure_txt company_name" />
+                  </div>
+                  <div class="c_brochure_txtbox">
+                    <label class="txt_bold"> 담당자명/직책</label><br />
+                    <input type="text" class="c_brochure_txt client_name" />
+                  </div>
+                  <div class="c_brochure_txtbox">
+                    <label class="txt_bold"> 연락처</label><br />
+                    <input type="text" class="c_brochure_txt tel" />
+                  </div>
+                  <div class="c_brochure_txtbox">
+                    <label class="txt_bold">이메일</label><br />
+                    <input type="text" class="c_brochure_txt email" />
+                  </div>
+                  <div class="privacy_check">
+                    <input type="checkbox" id="b_privacy_check" />
+                    <label for="b_privacy_check">
+                      <span class="txt_bold txt_small custom_checkbox"
+                        >개인정보 처리방침<span class="txt_gray_color"
+                          >에 동의합니다.</span
+                        ><a href="#"> [전문보기]</a></span
+                      >
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="c_btns c_brochure_btn">
+                <button type="submit" class="c_btn submit_btn">신청하기</button>
+                <button type="reset" class="c_btn reset_btn">취소</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="family_bg">
+        <div class="family_on">
+          <div class="family_close">
+            <span></span>
+          </div>
+          <menu>
+            <li class="title">
+              <h3>미스터 부우</h3>
+              <a href="#"
+                ><img
+                  src="./images/sns-instagram.svg"
+                  alt="인스타그램 바로가기"
+              /></a>
+              <a href="#"
+                ><img src="./images/sns-youtube.svg" alt="유튜브 바로가기"
+              /></a>
+            </li>
+            <li>
+              <a href="#">official website</a>
+            </li>
+            <li>
+              <a href="#">부우샵</a>
+            </li>
+          </menu>
+        </div>
+      </div>
+      <div class="f_cloud_bg"></div>
+      <div class="f_txt">
+        <p>Since 2014, ICT Creatuve Group , M.Funch</p>
+        <a href="#">info@mfunch.com</a>
+      </div>
+
+      <div class="family">
+        <button>Family Site</button>
+      </div>
+      <div class="top_btn">
+        <a href="contact.html"
+          ><img src="./images/top-btn.svg" alt="맨 위로"
+        /></a>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+    <!-- header menu scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <!-- title motionPath -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- jquery -->
+    <script src="./index.js"></script>
+  </body>
+</html>

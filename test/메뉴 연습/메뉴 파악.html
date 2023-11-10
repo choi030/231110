@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./nav_menu.css" />
+    <title>title</title>
+    <style>
+      body {
+        background-color: #293335;
+      }
+      .s_nav .nav_content {
+        display: none;
+      }
+      .s_nav-tgl {
+        display: inline-block;
+        cursor: pointer;
+        position: fixed;
+        z-index: 100;
+        right: 30px;
+        top: 30px;
+        width: 70px;
+        height: 70px;
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+        background: #fff;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+        line-height: 0.6;
+        text-align: center;
+      }
+      .s_nav-tgl > span.s_span {
+        display: inline-block;
+        position: relative;
+        height: 2px;
+        width: 34px;
+        border-radius: 1px;
+        background: #293335;
+        vertical-align: middle;
+      }
+      .s_nav-tgl > span.s_span:before,
+      .s_nav-tgl > span.s_span:after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        border-radius: 1px;
+        background: #293335;
+        transition: all 200ms;
+      }
+      .s_nav-tgl > span.s_span:before {
+        top: -11px;
+        left: 3px;
+        width: 28px;
+      }
+      .s_nav-tgl > span.s_span:after {
+        top: 11px;
+        left: 6px;
+        width: 22px;
+      }
+      .s_nav-tgl:focus {
+        outline: none;
+      }
+      .s_nav-tgl:hover > span:after,
+      .s_nav-tgl:hover > span:before {
+        width: 34px;
+        left: 0;
+      }
+      .s_nav:before {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background: #fff;
+        transition: all 500ms ease-in-out;
+        clip-path: circle(30px at calc(100% - 65px) 65px);
+        visibility: hidden;
+      }
+      .s_menu.active .s_nav:before {
+        visibility: visible;
+        clip-path: circle(100%);
+      }
+      .s_menu.active .s_nav-tgl > span {
+        height: 0;
+      }
+      .s_menu.active .s_nav-tgl > span:after,
+      .s_menu.active .s_nav-tgl > span:before {
+        top: 0px;
+        left: 0;
+        width: 34px;
+      }
+      .s_menu.active .s_nav-tgl > span:after {
+        transform: rotate(-45deg);
+      }
+      .s_menu.active .s_nav-tgl > span:before {
+        transform: rotate(45deg);
+      }
+      .nav_content {
+        width: 100vw;
+        height: 100vh;
+        background: none;
+        position: absolute;
+        overflow: hidden;
+      }
+      .nav-content.block {
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Please ❤ if you like it-->
+    <!-- update 25/4/2019-->
+    <!-- I'd noticed that there are a lot of people who seem interested in this pen so I changed a little bit in the logic so it would fit better on production sites and make it easier to read!-->
+    <div class="s_menu">
+      <button class="s_nav-tgl" type="button" aria-label="toggle menu">
+        <!-- this span just for the three dividers in the hamburger button--><span
+          class="s_span"
+          aria-hidden="true"
+        ></span>
+      </button>
+      <nav class="s_nav">
+        <header>
+          <h1 class="h_logo">
+            <a href="../../contact.html"
+              ><img src="./imagse/logo.svg" alt="로고"
+            /></a>
+          </h1>
+          <div class="h_nav_icon">
+            <a href="#"
+              ><img
+                src="./imagse/sitemap_close.png"
+                alt="닫기버튼"
+                class="nav_icon"
+            /></a>
+          </div>
+        </header>
+
+        <!-- main -->
+
+        <div class="nav_content">
+          <nav>
+            <menu class="nav_menu">
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-70 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EA5028">
+                      <path
+                        d="M28.679 22.082c1.26-4.261 5.34-4.561 7.74-4.561s6.48.3 7.74 4.561l6.3 21.479c.06.3.42 1.021.66 1.021.18 0 .48-.12.78-1.261l6.959-25.318h13.8L62.397 51.78c-2.16 7.14-4.86 8.7-10.32 8.7-6.359 0-8.399-2.761-9.719-7.26l-5.34-18.239c-.18-.301-.3-1.08-.6-1.08s-.42.779-.6 1.08l-5.34 18.239c-1.32 4.499-3.36 7.26-9.719 7.26-5.34 0-8.16-1.62-10.32-8.7L.18 18.002h13.8l6.959 25.318c.3 1.141.6 1.261.78 1.261.24 0 .6-.721.66-1.021l6.3-21.478zM109.618 44.101c0 13.199-5.16 16.26-18.359 16.26-13.2 0-18.359-3.061-18.359-16.26s5.16-16.259 18.359-16.259c13.199 0 18.359 3.059 18.359 16.259zM91.259 51.96c5.4 0 6.36-3.06 6.36-7.859s-.96-7.859-6.36-7.859-6.36 3.06-6.36 7.859.96 7.859 6.36 7.859zM113.339 41.4c0-10.199 5.399-13.199 15.6-13.199h7.739v8.279h-4.379c-5.4 0-7.2 3-7.2 8.4V60h-11.76V41.4zM139.199 60V18.002h11.76V60h-11.76zm23.939 0-8.64-11.399c-1.74-2.34-1.859-4.08-1.859-5.1 0-2.34.84-3.48 1.92-4.98l7.26-10.319h12.719l-9.659 12.659c-.54.66-.84 1.62-.84 2.28 0 .9.479 1.98 1.2 2.88L176.338 60h-13.2zM176.938 51.48h17.339c.42 0 1.021-.24 1.021-.84 0-.96-3.24-1.62-4.14-1.98l-6.84-2.22c-4.859-1.62-7.74-3.54-7.74-9.539 0-6 3-8.7 8.4-8.7h21.719v8.16h-17.279c-.48 0-1.92 0-1.92.6 0 .9 1.62 1.14 3.061 1.62l8.039 2.7c5.279 1.8 8.939 3.72 8.939 10.319 0 5.999-3 8.399-8.399 8.399h-22.199V51.48z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-77 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EB4A33">
+                      <path
+                        d="M17.119 23.621c1.32-3.119 3.12-5.1 9.6-5.1 3.96 0 7.68.42 9.6 5.1L51.858 61H37.579l-3.3-8.64h-15.12l-3.3 8.64H1.58l15.539-37.379zm5.28 19.14h8.64l-3.78-10.619c-.12-.421-.3-.9-.54-.9-.24 0-.42.479-.54.9l-3.78 10.619zM60.138 61c-4.2 0-6.6-2.4-6.6-6.6V19.002h11.76v10.199h8.879c10.2 0 13.2 6.3 13.2 15.899s-3 15.9-13.199 15.9h-14.04zm5.16-11.399c0 2.399.6 3 3 3h2.16c4.44 0 4.92-3.66 4.92-7.5 0-3.06-.54-7.5-4.68-7.5h-5.399v12zM126.977 45.101c0 13.199-5.16 16.26-18.359 16.26s-18.36-3.061-18.36-16.26 5.16-16.259 18.359-16.259 18.36 3.059 18.36 16.259zm-18.36 7.859c5.4 0 6.359-3.06 6.359-7.859s-.959-7.859-6.359-7.859c-5.399 0-6.359 3.06-6.359 7.859s.96 7.859 6.359 7.859zM165.137 54.4c0 4.8-2.4 6.6-6.601 6.6h-15.239c-7.8 0-12.6-4.2-12.6-12V29.201h11.76v16.92c0 4.799 1.8 6.6 6.6 6.6h1.92c1.8 0 2.4-.601 2.4-2.4v-21.12h11.76V54.4zM184.156 61c-6.6 0-11.999-3-11.999-10.8V37.6h-4.499v-8.399h4.499V19.002h11.76v10.199h9.06V37.6h-9.06v7.2c0 4.8 1.8 7.8 7.2 7.8h1.859V61h-8.82z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-55 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EA5028">
+                      <path
+                        d="M20.529 60C6.73 60 2.17 53.4 2.17 39.001s4.56-20.999 18.359-20.999h17.759v10.439H27.489c-9 0-11.4 1.56-11.4 10.56 0 8.999 2.4 10.56 11.4 10.56h11.399V60H20.529zM78.008 44.101c0 13.199-5.16 16.26-18.359 16.26-13.2 0-18.359-3.061-18.359-16.26s5.16-16.259 18.359-16.259c13.199 0 18.359 3.059 18.359 16.259zM59.649 51.96c5.4 0 6.36-3.06 6.36-7.859s-.96-7.859-6.36-7.859-6.36 3.06-6.36 7.859.96 7.859 6.36 7.859zM81.729 34.801c0-4.8 2.4-6.6 6.6-6.6h14.76c7.8 0 12.6 4.2 12.6 12V60h-11.76V43.201c0-4.801-1.8-6.601-6.6-6.601h-1.44c-1.8 0-2.4.601-2.4 2.4v21h-11.76V34.801zM134.708 60c-6.6 0-11.999-3-11.999-10.8V36.6h-4.5v-8.399h4.5V18.002h11.76v10.199h9.059V36.6h-9.059v7.2c0 4.8 1.799 7.8 7.199 7.8h1.859V60h-8.819zM168.487 28.201c6.6 0 10.8 4.2 10.8 10.8V53.4c0 4.199-2.4 6.6-6.6 6.6h-19.68c-6 0-7.8-3.479-7.8-10.08 0-5.999 1.8-9.839 7.8-9.839h14.52v-.601c0-2.1-1.381-3.119-3.6-3.119h-16.56v-8.16h21.12zm-9.299 19.32c-1.2 0-2.22.96-2.22 2.399 0 1.08.72 2.28 2.1 2.28h6.06c1.801 0 2.4-.6 2.4-2.399v-2.28h-8.34zM196.207 60c-10.8 0-13.199-6.24-13.199-15.84s2.399-15.959 13.199-15.959h17.039V36.6h-11.64c-4.8 0-6.6 2.761-6.6 7.56 0 4.801 1.8 7.44 6.6 7.44h12.3V60h-17.699zM232.566 60c-6.6 0-12-3-12-10.8V36.6h-4.5v-8.399h4.5V18.002h11.76v10.199h9.06V36.6h-9.06v7.2c0 4.8 1.8 7.8 7.199 7.8h1.86V60h-8.819z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    viewBox="-85 -15 350 110"
+                    class="sub_page"
+                  >
+                    <g fill="#EA5028">
+                      <path
+                        d="M3.95 60V18.002h13.56V60H3.95zM22.79 34.801c0-4.8 2.4-6.6 6.6-6.6h14.759c7.799 0 12.599 4.2 12.599 12V60H44.989V43.201c0-4.801-1.8-6.601-6.6-6.601h-1.44c-1.8 0-2.4.601-2.4 2.4v21H22.79V34.801zM60.469 51.48h17.339c.42 0 1.02-.24 1.02-.84 0-.96-3.24-1.62-4.14-1.98l-6.839-2.22c-4.86-1.62-7.74-3.54-7.74-9.539 0-6 3-8.7 8.399-8.7h21.719v8.16H72.949c-.48 0-1.92 0-1.92.6 0 .9 1.62 1.14 3.06 1.62l8.04 2.7c5.28 1.8 8.939 3.72 8.939 10.319 0 5.999-3 8.399-8.399 8.399h-22.2V51.48zM94.428 25.621v-7.619h11.76v7.619h-11.76zm0 2.58h11.76V60h-11.76V28.201zM123.107 60c-10.199 0-13.199-6.3-13.199-15.899s3-15.899 13.199-15.899h8.879v-10.2h11.76V53.4c0 4.199-2.399 6.6-6.6 6.6h-14.039zm8.879-23.399h-5.399c-4.14 0-4.68 4.44-4.68 7.5 0 3.84.479 7.5 4.92 7.5h2.159c2.4 0 3-.601 3-3v-12zM159.767 60c-10.199 0-12.3-2.88-12.3-16.079 0-14.399 2.7-16.079 17.1-16.079 12 0 17.039.959 17.039 12.959 0 3.6-.84 7.08-5.039 7.08h-17.34c0 3 1.62 3.959 5.82 3.959h15.419V60h-20.699zm8.159-19.56c1.92 0 1.92-1.38 1.92-1.979 0-2.28-3.479-2.46-5.279-2.46-3 0-5.34.479-5.34 4.439h8.699z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </menu>
+          </nav>
+          <div class="c_content">
+            <div class="c_qna">
+              <a href="../../contact.html" class="inner inner_qna_btn">
+                <p class="txt_color">
+                  <span class="txt_bold">프로젝트</span> 문의하기
+                </p>
+                <img
+                  src="./imagse/contact-pencil.png"
+                  alt="연필 이미지"
+                  class="pencil"
+                />
+              </a>
+            </div>
+            <div class="c_brochure">
+              <a href="#" class="inner inner_brochur_btn">
+                <p class="txt_color">
+                  <span class="txt_bold">브로슈어</span> 신청하기
+                </p>
+                <img src="./imagse/contact-memo.png" alt="메모 이미지" />
+              </a>
+              <div class="c_brochure_modal">
+                <form class="c_brochure_content">
+                  <div class="c_brochure_client">
+                    <a class="brochure_close_btn"
+                      ><img
+                        src="./imagse/sitemap_close.png"
+                        alt="브로슈어 신청 닫기 버튼"
+                    /></a>
+                    <h4 class="txt_color">브로슈어 신청하기</h4>
+                    <div class="c_brochure_txtboxs">
+                      <div class="c_brochure_txtbox">
+                        <label class="txt_bold"> 회사/단체명</label><br />
+                        <input
+                          type="text"
+                          class="c_brochure_txt company_name"
+                        />
+                      </div>
+                      <div class="c_brochure_txtbox">
+                        <label class="txt_bold"> 담당자명/직책</label><br />
+                        <input type="text" class="c_brochure_txt client_name" />
+                      </div>
+                      <div class="c_brochure_txtbox">
+                        <label class="txt_bold"> 연락처</label><br />
+                        <input type="text" class="c_brochure_txt tel" />
+                      </div>
+                      <div class="c_brochure_txtbox">
+                        <label class="txt_bold">이메일</label><br />
+                        <input type="text" class="c_brochure_txt email" />
+                      </div>
+                      <div class="privacy_check">
+                        <input type="checkbox" id="b_privacy_check" />
+                        <label for="b_privacy_check">
+                          <span class="txt_bold txt_small custom_checkbox"
+                            >개인정보 처리방침<span class="txt_gray_color"
+                              >에 동의합니다.</span
+                            ><a href="#"> [전문보기]</a></span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c_btns c_brochure_btn">
+                    <button type="submit" class="c_btn submit_btn">
+                      신청하기
+                    </button>
+                    <button type="reset" class="c_btn reset_btn">취소</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      const menu = document.querySelector(".s_menu");
+      const btn = menu.querySelector(".s_nav-tgl");
+      const sub = document.querySelector(".s_nav .nav_content");
+
+      btn.addEventListener("click", (evt) => {
+        menu.classList.toggle("active");
+      });
+
+      let isMenuOpen = false; // 초기에 메뉴는 닫힌 상태
+
+      btn.addEventListener("click", (evt) => {
+        isMenuOpen = !isMenuOpen; // 메뉴 상태를 열린/닫힌으로 토글
+
+        if (isMenuOpen) {
+          menu.classList.add("active");
+          sub.style.display = "block";
+        } else {
+          menu.classList.remove("active");
+          sub.style.display = "none";
+        }
+      });
+      // sub.style.display.toggle = ('block');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+</head>
+<style>
+  .orange {
+    background-color: #ea5028;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    transform: scale(2.5);
+    margin: 1000px auto 0;
+  }
+
+  body {
+    margin: 0;
+    text-align: center;
+    height: 400vh;
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="orange"></div>
+  </div>
+  <script>
+    gsap.from(".orange", {
+      scrollTrigger: {
+        trigger: ".box", //어느 요소에 스크롤이 도착했을 때 시작할건지
+        start: "-50% 10%", //스크롤 트리거의 시작 기준점 설정. 앞의 값은 트리거 요소 기준(.full_screen의 상단부터 -20% 적용), 뒤의 값은 보고있는 페이지의 높이 기준.
+        end: "start start", //스크롤 트리거의 끝점 설정.
+        scrub: 0.8, //스크롤 바를 잡는데 걸리는 시간(움직임의 구현 속도 설정. 높을수록 느림.)
+        // markers: true,  //기준점을 화면에 표시할지 설정.
+        onLeave: function () {
+          // 끝나는지점 callback함수
+          console.log("첫번째 이벤트 완료");
+        },
+      },
+      scale: 0,
+    });
+  </script>
+</body>
+
+</html>

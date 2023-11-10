@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>title</title>
+  <style>
+    .s_nav ul {
+  display: none;
+}
+  .s_nav-tgl {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    right: 30px;
+    top: 30px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+    line-height: 0.6;
+    text-align: center;
+  }
+  .s_nav-tgl > span.s_span {
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 34px;
+    border-radius: 1px;
+    background: #293335;
+    vertical-align: middle;
+  }
+  .s_nav-tgl > span.s_span:before, .s_nav-tgl > span.s_span:after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    border-radius: 1px;
+    background: #293335;
+    transition: all 200ms;
+  }
+  .s_nav-tgl > span.s_span:before {
+    top: -11px;
+    left: 3px;
+    width: 28px;
+  }
+  .s_nav-tgl > span.s_span:after {
+    top: 11px;
+    left: 6px;
+    width: 22px;
+  }
+  .s_nav-tgl:focus {
+    outline: none;
+  }
+  .s_nav-tgl:hover > span:after, .s_nav-tgl:hover > span:before {
+    width: 34px;
+    left: 0;
+  }
+  .s_nav:before {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 500ms ease-in-out;
+    clip-path: circle(30px at calc(100% - 65px) 65px);
+    visibility: hidden;
+  }
+  .s_menu.active .s_nav:before {
+    visibility: visible;
+    clip-path: circle(100%);
+  }
+  .s_menu.active .s_nav-tgl > span {
+    height: 0;
+  }
+  .s_menu.active .s_nav-tgl > span:after, .s_menu.active .s_nav-tgl > span:before {
+    top: 0px;
+    left: 0;
+    width: 34px;
+  }
+  .s_menu.active .s_nav-tgl > span:after {
+    transform: rotate(-45deg);
+  }
+  .s_menu.active .s_nav-tgl > span:before {
+    transform: rotate(45deg);
+  }
+  </style>
+</head>
+<body>
+  <!-- Please ❤ if you like it-->
+<!-- update 25/4/2019-->
+<!-- I'd noticed that there are a lot of people who seem interested in this pen so I changed a little bit in the logic so it would fit better on production sites and make it easier to read!-->
+<div class="s_menu"><button class="s_nav-tgl" type="button" aria-label="toggle menu">
+  <!-- this span just for the three dividers in the hamburger button--><span class="s_span" aria-hidden="true"></span>
+</button>
+<nav class="s_nav">
+  <!-- I don't care about the menu elements here so I will hide them-->
+  <ul>
+      <li>
+        하하하하하하하하하하하하하하하하
+        메뉴 닫기 열기는 완성.
+      </li>
+  </ul>
+</nav>
+</div>
+<script>
+  const menu = document.querySelector('.s_menu');
+const btn = menu.querySelector('.s_nav-tgl');
+const sub = document.querySelector('.s_nav ul');
+
+btn.addEventListener('click', evt => {
+	menu.classList.toggle('active');
+});
+
+let isMenuOpen = false; // 초기에 메뉴는 닫힌 상태
+
+  btn.addEventListener('click', evt => {
+    isMenuOpen = !isMenuOpen; // 메뉴 상태를 열린/닫힌으로 토글
+
+    if (isMenuOpen) {
+      menu.classList.add('active');
+      sub.style.display = 'block';
+    } else {
+      menu.classList.remove('active');
+      sub.style.display = 'none';
+    }
+  });
+// sub.style.display.toggle = ('block');
+
+</script>
+</body>
+</html>
